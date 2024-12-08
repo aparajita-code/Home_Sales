@@ -18,3 +18,39 @@ In this challenge, is all  about knowledge of SparkSQL to determine key metrics 
 14.Run the query that filters the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
 15.Uncache the home_sales temporary table.
 16.Verify that the home_sales temporary table is uncached using PySpark.
+
+
+**Set up Instructions**
+
+**Local System Users**:-
+#the version used in the local system
+!pip3 install pyspark
+!pip3 install findspark
+
+# Start a SparkSession
+import findspark
+findspark.init()
+
+spark_version = 'spark-3.4.0' #the correct version of spark when doing it in your loacal system
+os.environ['SPARK_VERSION']=spark_version
+
+os.environ["JAVA_HOME"] ="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+os.environ["SPARK_HOME"] = "/opt/anaconda3/lib/python3.12/site-packages/pyspark"
+
+
+**Google colab users**:-
+
+#the version used in the google colab
+!pip install pyspark
+!pip install findspark
+
+# Start a SparkSession
+import findspark
+findspark.init()
+
+spark_version = 'spark-3.5.3'
+os.environ['SPARK_VERSION']=spark_version
+
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-11-openjdk-amd64"
+os.environ["SPARK_HOME"] = f"/content/{spark_version}-bin-hadoop3"
+
